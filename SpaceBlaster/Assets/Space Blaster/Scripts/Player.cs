@@ -101,7 +101,7 @@ public class Player : MonoBehaviour
             transform.Translate(Vector3.up * _speed * verticalAxis * Time.deltaTime);
         }
         
-
+        //Player Boundaries on the Y position
         if (transform.position.y > 0f)
         {
             transform.position = new Vector3(transform.position.x, 0, transform.position.z);
@@ -111,21 +111,22 @@ public class Player : MonoBehaviour
             transform.position = new Vector3(transform.position.x, -4.2f, transform.position.z);
         }
 
-        /*if (transform.position.x < -8.3f)
+        //Player Boundaries on the X position
+        if (transform.position.x < -8.3f)
         {
             transform.position = new Vector3(-8.3f, transform.position.y, transform.position.z);
         }else if (transform.position.x > 8.3f)
         {
             transform.position = new Vector3(8.3f, transform.position.y, transform.position.z);
-        }*/
-        if (transform.position.x < -9.45f)
+        }
+        /*if (transform.position.x < -9.45f)
         {
             transform.position = new Vector3(8.3f, transform.position.y, transform.position.z);
         }
         else if (transform.position.x > 9.45f)
         {
             transform.position = new Vector3(-8.3f, transform.position.y, transform.position.z);
-        }
+        }*/
     }
 
     public void PowerUpTripleShot()
